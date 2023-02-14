@@ -7,6 +7,7 @@ const canvas = document.getElementById('canvas')
  * */
 const gd = canvas.getContext('2d')
 
+gd.beginPath()
 // 路径操作-指定操作范围, 不会实际绘图
 gd.moveTo(100,100) // 设定起点
 gd.lineTo(100, 600) // 目标点
@@ -17,6 +18,7 @@ gd.lineWidth = 1
 // 划线
 gd.stroke()
 
+gd.beginPath()
 gd.moveTo(200, 100)
 gd.lineTo(300, 100)
 gd.lineTo(300, 200)
@@ -26,6 +28,7 @@ gd.closePath()
 gd.fillStyle = 'red'
 gd.fill()
 
+gd.beginPath()
 gd.moveTo(400, 100)
 gd.lineTo(400, 600)
 gd.lineWidth = 50
@@ -36,8 +39,8 @@ gradient01.addColorStop(1, 'green')
 gd.strokeStyle = gradient01
 gd.stroke()
 
+gd.beginPath()
 gd.rect(700, 0, 100, 800)
-gd.lineWidth = 1
 const gradient02 = gd.createRadialGradient(700, 0, 20, 700, 800, 20)
 gradient02.addColorStop(0, 'red')
 gradient02.addColorStop(0.5, 'yellow')
