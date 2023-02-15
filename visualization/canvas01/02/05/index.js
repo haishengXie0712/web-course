@@ -12,6 +12,7 @@ drawRect(100, 100, canvas.width - 200, canvas.height - 200)
 gd.globalAlpha = 1
 
 function drawRect(x, y, w, h) {
+    gd.beginPath()
     gd.moveTo(x, y);
     gd.lineTo(x + w, y)
     gd.lineTo(x + w, y + h)
