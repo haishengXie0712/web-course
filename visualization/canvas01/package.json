@@ -1,0 +1,12 @@
+{
+  "name": "canvas01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=8888"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
