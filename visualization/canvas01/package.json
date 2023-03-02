@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "live-server --port=8888"
+    "dev": "live-server --port=8888 --ignore=.idea"
   },
   "keywords": [],
   "author": "",
