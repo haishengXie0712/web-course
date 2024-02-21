@@ -53,3 +53,33 @@ function _asyncToGenerator(fn) {
         });
     };
 }
+function call() {
+    return _call.apply(this, arguments);
+}
+function _call() {
+    // mark -> 展示对函数进行原型链上的一些设置, 没有什么特殊操作;
+    // https://github1s.com/babel/babel/blob/main/packages/babel-helpers/src/helpers/regeneratorRuntime.js#L156-L157
+    // 正还是调用 wrap 返回的 generator 函数
+    _call = _asyncToGenerator(_regeneratorRuntime().mark(function _callee() {
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+            switch (_context.prev = _context.next) {
+                case 0:
+                    console.log('start');
+                    _context.next = 3;
+                    return sleep(100, 'call1');
+                case 3:
+                    console.log('end call1');
+                    _context.next = 6;
+                    return sleep(100, 'call2');
+                case 6:
+                    console.log('end call2');
+                    console.log('end');
+                case 8:
+                case "end":
+                    return _context.stop();
+            }
+        }, _callee);
+    }));
+    return _call.apply(this, arguments);
+}
+call();
